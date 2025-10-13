@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <link rel='stylesheet' type='text/css' href='{% static 'css/cars/gallery.css' %}'>
+{% endblock %}
+{% block content %}
+
+    <section class="cars">
+        <h2>Featured Cars</h2>
+        <div class="car-grid">
+            {% for car in cars %}
+
+                <div class="car-card">
+                    <img src="{% static 'img/hq720-removebg-preview.png' %}" alt="Ahmad's Car" class="carImg">
+                    <div class="car-info">
+                        <h3>{{ car.name }} {{ car.year }}</h3>
+                        <p>{{ car.description }}</p>
+                        <button>Book a ride</button>
+                    </div>
+                </div>
+
+            {% endfor %}
+            
+        </div>
+    </section>
+{% endblock %}

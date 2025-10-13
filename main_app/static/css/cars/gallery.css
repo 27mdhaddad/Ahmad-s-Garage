@@ -1,0 +1,98 @@
+body {
+    
+}
+.cars {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+.cars h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.car-card {
+    background: #262626;
+    border-radius: 12px;
+
+      overflow: hidden;
+      transition: 0.3s;
+}
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+}
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.car-info {
+    padding: 20px;
+}
+.car-info h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+}
+.car-info p {
+    margin: 0 0 15px;
+    color: #aaa;
+}
+.car-info button {
+    padding: 10px 20px;
+
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+
+    background: transparent;
+     
+    border-radius: 10px;
+    border: 2px solid rgb(255, 87, 26);
+      
+    display: inline-block;
+    font-weight: 500;
+
+    position: relative;
+      
+    text-transform: uppercase;
+       
+}
+.car-info button:hover {
+        
+    box-shadow: 0px 3px 10px 0px rgba(250, 92, 1, 0.973);
+
+}
+
+.cars .car-card .carImg{
+    position:absolute;
+    top:60%;
+    left:70%;
+        
+    height: 80px;
+    max-width:130px;
+            
+    transition:.3s;
+    opacity: 0;
+
+}
+.cars .car-card:hover .carImg{
+    opacity: 1;
+    
+}
+
+
+
+footer {
+    
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    
+}
