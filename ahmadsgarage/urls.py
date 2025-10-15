@@ -20,5 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main_app.urls')),# Mount the main_app URLs at the root
+    path('accounts/', include('django.contrib.auth.urls')),
 
 ]

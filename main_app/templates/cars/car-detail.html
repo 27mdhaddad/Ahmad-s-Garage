@@ -44,16 +44,16 @@
             </div>
         </div>
     
-        <!-- Description Section -->
+        
         <div class="detail-description">
-            <h2>About This Vehicle</h2>
+            <h2>Description</h2>
             <p>{{ car.description }}</p>
         </div>
     
-        <!-- Action Buttons -->
+        
         <div class="detail-actions">
             
-            <button class="btn-detail btn-secondary">Schedule Test Drive</button>
+            <button class="btn-detail btn-secondary">Add Accessory</button>
             <a href="{% url 'car-update' car.id %}" class="btn-detail btn-secondary">Edit Car</a>
             <a href="{% url 'car-delete' car.id %}" class="btn-detail btn-secondary" style="color: #ff6b6b; border-color: #ff6b6b;">Delete Car</a>
         </div>

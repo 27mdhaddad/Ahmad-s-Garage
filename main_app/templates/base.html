@@ -27,11 +27,24 @@
             <img src="{% static 'img/nissan_gtr__YTH8xIZM.png' %}" alt="logo" height="60">
             My<span>Garage</span>
         </div>
+
         <nav>
+            {% if user.is_authenticated %}
             <a href="{% url 'home' %}">Home</a>
             <a href="{% url 'gallery' %}">Gallery</a>
             <a href="{% url 'car-create' %}">Add a Car</a>
             <a href="{% url 'about' %}">About</a>
+            <form id='logout-form' method='post' action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type='submit'>Logout</button>
+            </form>
+
+            {% else %}
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'home' %}">Login</a>
+            <a href="{% url 'signup' %}">Signup</a>
+
+            {% endif %}
         </nav>
     </header>
 
@@ -47,7 +60,7 @@
 
     <footer>
         <p>© 2025 Ahmad's Garage. All rights reserved.</p>
-        <p>Follow us on <a target='_blank' href="https://www.instagram.com"> Instagram</a> | <a target='_blank' href="https://www.youtube.com">YouTube</a> | <a target='_blank' href="https://www.linkedin.com">LinkedIn</a></p>
+        <p>Follow us on <a target='_blank' href="https://www.instagram.com"> Instagram</a> | <a target='_blank' href="https://www.youtube.com">YouTube</a> | <a target='_blank' href="https://www.linkedin.com/in/ahmadhaddad1/">LinkedIn</a></p>
     </footer>
 
     

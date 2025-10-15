@@ -1,14 +1,27 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block head %}
+    <link rel='stylesheet' href='{% static 'css/home.css' %}' />
+{% endblock %}
 {% block content %}
 
     
     <section class="hero">
         <div class="hero-content">
-            <h1>Welcome to Ahmad's Garage</h1>
+            <h1>Welcome to <span>Ahmad's Garage</span></h1>
             <p>Your Ultimate Destination for Luxury and Performance Cars</p>
-
-            <a class='aboutbtn' href="#">Tell me more</a>
+            {% if not user.is_authenticated %}
+            <section>
+                <form action="{% url 'home' %}" method='post' class='login'>
+                    <h1>Sign In</h1>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="hidden" name="next" value="{{ next }}" />
+                    <button type="submit" class="login-submit">Login</button>
+                </form>
+            </section>
+            {% endif %}
+            
         </div>
     </section>
 

@@ -55,6 +55,7 @@ table th {
 table input[type="text"],
 table input[type="number"],
 table input[type="date"],
+form input[type="password"],
 table textarea,
 table select {
     width: 100%;
