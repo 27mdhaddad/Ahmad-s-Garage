@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class='page-header'>
+        <h1>Delete Car</h1>
+        <img src="{% static 'img/hq720-removebg-preview.png' %}" alt="Ahmad's Car" class="carImg">
+    </div>
+
+    <h2> Are you sure you want to Delete {{ car.name }}?</h2>
+    <form action="" method="post" class="form">
+        {% csrf_token %}
+        <a href="{% url 'car-detail' car.id %}" class='btn-detail btn-secondary'>Cancel</a>
+        <button type='submit' class='btn-detail btn-danger'>Yes - Delete</button>
+    </form>
+
+{% endblock %}

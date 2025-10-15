@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <link rel='stylesheet' href="{% static 'css/form.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+    <div class="form-container">
+
+        {% if car %}
+        <h1>Edit {{ car.name }}</h1>
+        {% else %}
+        <h1>Add New Car</h1>
+        {% endif %}
+        
+        <form method="POST" action="">
+            {% csrf_token %} 
+            
+            <table>
+                {{ form.as_table }}
+            </table>
+
+            <div class="car-form-actions">
+                {% if car %}
+                <button type="submit" class="btn-submit" >Confirm Edit</button>
+                <a href="{% url 'car-detail' car.id %}" class="btn-cancel">Cancel</a>
+                {% else %}
+                <button type="submit" class="btn-submit" >Add Car</button>
+                <a href="/" class="btn-cancel">Cancel</a>
+                {% endif %}
+            </div>
+            
+        </form>
+    </div>
+    
+    
+        
+        
+{% endblock %}

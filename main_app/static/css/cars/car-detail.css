@@ -1,0 +1,173 @@
+.car-detail {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.detail-container {
+    background: #262626;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.detail-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 40px;
+}
+
+.detail-image {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.detail-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-info h1 {
+    font-size: 36px;
+    margin: 0 0 20px;
+    color: #fff;
+}
+
+.detail-specs {
+    margin: 30px 0;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #444;
+    color: #aaa;
+    font-size: 14px;
+}
+
+.spec-item strong {
+    color: #fff;
+}
+
+.spec-item:last-child {
+    border-bottom: none;
+}
+
+.detail-price {
+    font-size: 28px;
+    color: rgb(255, 87, 26);
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.detail-description {
+    padding: 40px;
+    border-top: 1px solid #444;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.detail-description h2 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.detail-actions {
+    padding: 40px;
+    border-top: 1px solid #444;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: rgb(255, 87, 26);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: rgba(255, 87, 26, 0.8);
+}
+
+
+
+footer {
+    position: absolute;
+    width: 100%;
+    
+    right: 0;
+    
+}
+
+
+@media only screen and (max-width: 768px) {
+    .car-detail {
+        margin: 30px auto;
+    }
+
+    .detail-header {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .detail-info h1 {
+        font-size: 28px;
+    }
+
+    .detail-price {
+        font-size: 24px;
+    }
+
+    .detail-description,
+    .detail-actions {
+        padding: 20px;
+    }
+
+    .detail-actions {
+        flex-direction: column;
+    }
+
+    .btn-detail {
+        width: 100%;
+        text-align: center;
+    }
+
+    
+}
+
+@media only screen and (max-width: 480px) {
+    .detail-info h1 {
+        font-size: 24px;
+    }
+
+    .detail-price {
+        font-size: 20px;
+    }
+
+    .spec-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    
+}

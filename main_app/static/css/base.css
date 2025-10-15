@@ -2,11 +2,11 @@
 *{
     scroll-behavior: smooth;
     text-decoration:none;
-   
+    font-family: 'Orbitron', sans-serif;
 }
 body {
       margin: 0;
-      font-family: 'Orbitron', sans-serif;
+      
       background: #1b1b1b;
       color: #fff;
     }
@@ -103,21 +103,74 @@ nav a:hover{
     box-shadow: 0px 3px 10px 0px rgba(250, 92, 1, 0.973);
   
 }
+.btn-detail {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-primary {
+    background: rgb(255, 87, 26);
+    color: #fff;
+    border: 2px solid rgb(255, 87, 26);
+}
 
+.btn-primary:hover {
+    background: rgba(255, 87, 26, 0.9);
+    box-shadow: 0px 3px 10px 0px rgba(250, 92, 1, 0.973);
+}
 
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgb(255, 87, 26);
+}
 
+.btn-secondary:hover {
+    background: rgba(255, 87, 26, 0.1);
+    box-shadow: 0px 3px 10px 0px rgba(250, 92, 1, 0.973);
+}
 
+.btn-danger{
+    background: transparent;
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+.btn-danger:hover{
+    background: rgba(255, 87, 26, 0.1);
+    box-shadow: 0px 3px 10px 0px rgba(250, 92, 1, 0.973);
+}
 
+.page-header {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
 
+.page-header img {
+  height: 40px;
+  margin-left: 15px;
+}
+
+.page-header img:first-of-type {
+  margin-left: 20px;
+}
 
    
 footer {
+    position: absolute;
+    width: 100%;
     text-align: center;
     padding: 30px;
     background: #262626;
     border-top: 2px solid #ff571a;
     margin-top: 60px;
-    
+    right: 0;
     bottom: 0;
 }
 footer p {

@@ -1,12 +1,22 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class Car(models.Model):
     name = models.CharField(max_length=100)
     color = models.CharField(max_length=50)
-    description = models.TextField(max_length=500)
     year = models.IntegerField()
+    model = models.CharField(max_length=100)
+    description = models.TextField(max_length=500)
+    price = models.IntegerField()
+    
 
     def __str__(self):
-        macchina = f"{self.name} ({self.year}) - {self.color}"
+        macchina = f"A {self.color} {self.name} ({self.year})"
         return macchina
+
+
+
+    def get_absolute_url(self):
+        return reverse("car-detail", kwargs={"car_id": self.id}) 
+    
